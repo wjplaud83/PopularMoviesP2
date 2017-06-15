@@ -64,17 +64,15 @@
                         style="@style/detailFavorite"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Make Favorite" />
+                        android:textSize="10sp"
+                        android:text="Make Favorite"
+                        android:onClick="onButtonClick"/>
 
                     <Button
+                        android:id="@+id/movie_trailer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TRAILER 1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="TRAILER 2" />
+                        android:text="TRAILER" />
 
 
                 </LinearLayout>

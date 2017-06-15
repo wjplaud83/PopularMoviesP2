@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,11 +45,13 @@ public class MovieDetailFragment extends Fragment {
         ImageView poster = (ImageView) v.findViewById(R.id.poster_image_view);
         TextView releaseDate = (TextView) v.findViewById(R.id.release_date);
         TextView ratings = (TextView) v.findViewById(R.id.ratings_view);
+        Button trailer =  (Button) v.findViewById(R.id.movie_trailer);
         TextView overview = (TextView) v.findViewById(R.id.synopsis_view);
 
         title.setText(movie.getTitle());
         Picasso.with(getActivity()).load(movie.getPoster()).into(poster);
         releaseDate.setText(movie.getReleaseDate());
+        trailer.setText(movie.getTrailer());
         ratings.setText(movie.getVoteAverage() + "/10");
         overview.setText(movie.getOverview());
 
