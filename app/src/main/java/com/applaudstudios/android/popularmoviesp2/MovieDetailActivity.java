@@ -3,11 +3,13 @@ package com.applaudstudios.android.popularmoviesp2;
 
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -41,7 +43,18 @@ public class MovieDetailActivity extends ActionBarActivity {
 
     public void onTrailerClick(View view) {
 
+
         Toast.makeText(this, R.string.show_trailer, Toast.LENGTH_SHORT).show();
+
+        Button trailerBtn = (Button)findViewById(R.id.movie_trailer);
+        trailerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=7e31d4c407c7bcc435949aca3bdd5955"));
+           startActivity(intent);
+            }
+        });
+      //  Toast.makeText(this, R.string.show_trailer, Toast.LENGTH_SHORT).show();
 
     }
 
