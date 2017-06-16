@@ -35,13 +35,13 @@ public class MovieDetailActivity extends ActionBarActivity {
 
     public void onButtonClick(View view) {
 
-        Toast.makeText(this, R.string.show_favorite, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.show_favorite, Toast.LENGTH_SHORT).show();
 
         }
 
     public void onTrailerClick(View view) {
 
-        Toast.makeText(this, R.string.show_trailer, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.show_trailer, Toast.LENGTH_SHORT).show();
 
     }
 
