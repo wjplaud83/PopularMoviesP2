@@ -135,12 +135,12 @@ public class FetchMoviesTask extends AsyncTask<String, Void, List<Movie>> {
     }
 
 
+
     private List<Movie> extractData(String moviesJsonStr) throws JSONException {
 
         // Items to extract
 
         //new array
-        final String ARRAY_OF_TRAILERS = "movie trailer";
 
         final String ARRAY_OF_MOVIES = "results";
         final String ORIGINAL_TITLE = "original_title";
@@ -148,7 +148,6 @@ public class FetchMoviesTask extends AsyncTask<String, Void, List<Movie>> {
         final String OVERVIEW = "overview";
         final String VOTE_AVERAGE = "vote_average";
         final String RELEASE_DATE = "release_date";
-        final String TRAILER = "trailer";
 
         JSONObject moviesJson = new JSONObject(moviesJsonStr);
         JSONArray moviesArray = moviesJson.getJSONArray(ARRAY_OF_MOVIES);
@@ -165,7 +164,6 @@ public class FetchMoviesTask extends AsyncTask<String, Void, List<Movie>> {
             String overview = movie.getString(OVERVIEW);
             String voteAverage = movie.getString(VOTE_AVERAGE);
             String releaseDate = getYear(movie.getString(RELEASE_DATE));
-       //     String trailer = getTrailer(movie.getString(TRAILER));
 
             movies.add(new Movie(title, poster, overview, voteAverage, releaseDate));
 

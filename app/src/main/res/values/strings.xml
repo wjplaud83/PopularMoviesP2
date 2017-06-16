@@ -19,6 +19,6 @@
     <string name="sort_array_item_2_value">top_rated</string>
     <string name="title_activity_movie_detail">MovieDetailActivity</string>
     <string name="show_favorite">Favorite movie</string>
-    <string name="trailers">Trailers</string>
+    <string name="show_trailer">Trailer</string>
 
 </resources>
