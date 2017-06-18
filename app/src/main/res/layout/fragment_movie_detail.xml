@@ -51,7 +51,8 @@
                         android:id="@+id/release_date"
                         style="@style/detailYear"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:onClick="onCheckBoxClick"/>
 
                     <TextView
                         android:id="@+id/ratings_view"

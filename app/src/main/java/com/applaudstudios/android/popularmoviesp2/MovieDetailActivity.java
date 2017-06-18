@@ -35,26 +35,24 @@ public class MovieDetailActivity extends ActionBarActivity {
         getSupportActionBar().setElevation(0f);
     }
 
-    public void onButtonClick(View view) {
+    public void onCheckBoxClick(View view) {
 
         Toast.makeText(this, R.string.show_favorite, Toast.LENGTH_SHORT).show();
 
-        }
+    }
 
     public void onTrailerClick(View view) {
 
+        // Toast.makeText(this, R.string.show_trailer, Toast.LENGTH_SHORT).show();
 
-        Toast.makeText(this, R.string.show_trailer, Toast.LENGTH_SHORT).show();
-
-        Button trailerBtn = (Button)findViewById(R.id.movie_trailer);
+        Button trailerBtn = (Button) findViewById(R.id.movie_trailer);
         trailerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=7e31d4c407c7bcc435949aca3bdd5955"));
-           startActivity(intent);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=7e31d4c407c7bcc435949aca3bdd5955"));
+                startActivity(intent);
             }
         });
-      //  Toast.makeText(this, R.string.show_trailer, Toast.LENGTH_SHORT).show();
 
     }
 
