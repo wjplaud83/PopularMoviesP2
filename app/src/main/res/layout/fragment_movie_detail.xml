@@ -67,6 +67,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
                         android:textColor="#747474"
+                        android:onClick="onCheckBoxClick"
                         android:text="@string/show_favorite" />
 
                     <Button
