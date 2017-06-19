@@ -31,6 +31,7 @@ public class FetchMoviesTask extends AsyncTask<String, Void, List<Movie>> {
 
     public com.applaudstudios.android.popularmoviesp2.AsyncResponse delegate;
     private final String LOG_TAG = FetchMoviesTask.class.getSimpleName();
+    private final String _ID = "297762";
     private final String API_KEY = "7e31d4c407c7bcc435949aca3bdd5955";
     private final String MOVIE_POSTER_BASE = "http://image.tmdb.org/t/p/";
     private final String MOVIE_POSTER_SIZE = "w185";
@@ -53,7 +54,7 @@ public class FetchMoviesTask extends AsyncTask<String, Void, List<Movie>> {
         String moviesJsonStr = null;
 
         try {
-
+            final String TRAILER_URL = "http://api.themoviedb.org/3/movie/{id}/videos";
             final String BASE_URL = "http://api.themoviedb.org/3/movie?";
             final String SORT_BY = "sort_by";
             final String KEY = "api_key";

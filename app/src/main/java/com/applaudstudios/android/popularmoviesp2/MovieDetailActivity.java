@@ -36,21 +36,20 @@ public class MovieDetailActivity extends ActionBarActivity {
         getSupportActionBar().setElevation(0f);
     }
 
-//checkbox for a favorite movie
+    //checkbox for a favorite movie
     public void onCheckBoxClick(View view) {
 
         //is it checked?
         boolean checked = ((CheckBox) view).isChecked();
 
         // check which checkbox is checked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.favorite_view:
                 if (checked)
                     break;
         }
 
         Toast.makeText(this, R.string.show_favorite, Toast.LENGTH_SHORT).show();
-
 
 
     }
@@ -63,7 +62,7 @@ public class MovieDetailActivity extends ActionBarActivity {
         trailerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=7e31d4c407c7bcc435949aca3bdd5955"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://api.themoviedb.org/3/movie/297762/videos"));
                 startActivity(intent);
             }
         });
